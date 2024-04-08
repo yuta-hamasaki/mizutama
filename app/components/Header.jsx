@@ -1,34 +1,53 @@
-import React from 'react';
+"use client"
+import { useState } from 'react';
+import Link from 'next/link';
+import ContactButton from './ContactButton';
 
-const Header = () => {
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <header className="bg-gray-800 text-white py-4 px-6 flex justify-between items-center">
-      <div className="flex items-center">
-        {/*<img src="/logo.png" alt="Company Logo" className="h-10 mr-4" />*/}
-        <h1 className='text-3xl font-bold h-10 mr-4'>九陽商事</h1>
-        <nav>
-          <ul className="flex space-x-4">
-            <li><a href="#">会社概要</a></li>
-            <li><a href="#">サービス</a></li>
-            <li><a href="#">製品情報</a></li>
-          </ul>
-        </nav>
+    <header className="py-5 px-10 flex justify-between items-center fixed w-full bg-blue-50 z-50 shadow-xl">
+      <div>
+        <h1 className="text-2xl font-extrabold">
+          <Link href="/">九陽商事</Link>
+        </h1>
       </div>
-      <div className="flex items-center">
-        <div className="flex">
-          <ul className=" text-white items-center flex">
-          <li>EN</li>
-          <p>|</p>
-          <li>中文</li>
-          <p>|</p>
-          <li>日本語</li>
-          </ul>
 
-          <button className="mx-4 bg-green-500 rounded-3xl p-2">CONTACT</button>
+      <div className="hidden md:flex">
+        <div className="text-sm font-medium flex flex-row">
+          <div className="flex flex-row mr-3 px-3 py-3"> 
+            <Link href="/about"><p>会社概要</p></Link>
+            <Link href="/skills"><p className="px-5">サービス</p></Link>
+            <Link href="#projects"><p>製品情報</p></Link>
+          </div>
+          <ContactButton/>
         </div>
       </div>
+
+      <div className="md:hidden">
+        <button onClick={toggleMenu} className="block text-gray-700 hover:text-gray-900 focus:text-gray-900 focus:outline-none">
+          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      {isOpen && (
+        <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-md py-2">
+          <div className="flex flex-col items-center">
+            <Link href="/"><p className="py-2">会社概要</p></Link>
+            <Link href="/"><p className="py-2">製品情報</p></Link>
+            <Link href="/"><p className="py-2">製品情報</p></Link>
+            <ContactButton/>
+          </div>
+        </div>
+      )}
     </header>
   );
-};
+}
 
-export default Header;
