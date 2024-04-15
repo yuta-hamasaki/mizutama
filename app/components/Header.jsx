@@ -17,7 +17,6 @@ export default function Header() {
           <Link href="/">九陽商事</Link>
         </h1>
       </div>
-
       <div className="hidden md:flex">
         <div className="text-sm font-medium flex flex-row">
           <div className="flex flex-row mr-3 px-3 py-3"> 
@@ -41,7 +40,7 @@ export default function Header() {
         <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-md py-2">
           <div className="flex flex-col items-center">
             <Link href="/"><p className="py-2">会社概要</p></Link>
-            <Link href="/"><p className="py-2">製品情報</p></Link>
+            <Link href="/"><p className="py-2">サービス</p></Link>
             <Link href="/"><p className="py-2">製品情報</p></Link>
             <ContactButton/>
           </div>
