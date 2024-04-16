@@ -3,7 +3,7 @@ import React from 'react';
 const Location = () => {
   return (
     <div className="container mx-auto px-4 md:px-28 my-12">
-      <h2 className="font-bold text-xl md:text-5xl underline decoration-solid decoration-4 decoration-red-300 text-center mb-8">
+      <h2 className="font-bold text-3xl md:text-4xl underline decoration-solid decoration-4 decoration-red-300 text-center mb-8">
         アクセス
       </h2>
       <div className="flex flex-col md:flex-row items-center justify-center gap-8">
