@@ -7,9 +7,9 @@ const Feature = () => {
     {title: "輸出", contents: "テキスト"},
   ];*/
   return (
-    <div className="py-16 bg-blue-50">
+    <div className="py-10 bg-blue-50">
       <h2 className='text-center font-bold text-5xl underline decoration-solid decoration-4 decoration-red-300'>Service</h2>
-      <div className='flex md:flex-row  flex-col justify-center text-center pt-16'>
+      <div className='flex md:flex-row  flex-col justify-center text-center pt-10 mx-16'>
         {/*feat.map((feat, index)=>{*/
         <FeatCards 
           /*key={index}
