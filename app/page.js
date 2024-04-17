@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { FadeIn } from './components/FadeIn';
 import Top from './components/Top';
 import About from './components/About';
 import Feature from './components/Feature'
@@ -8,11 +8,21 @@ import Location from './components/Location'
 export default function Home() {
   return (
     <div>
-      <Top/>
-      <About/>
-      <Feature/>
-      <Info/>
-      <Location/>
+      <FadeIn>        
+        <Top/>
+      </FadeIn>   
+      <FadeIn>
+        <About/>
+      </FadeIn>
+      <FadeIn>
+        <Feature/>
+      </FadeIn>
+      <FadeIn>
+        <Info/>
+      </FadeIn>
+      <FadeIn>
+       <Location/>
+      </FadeIn>
     </div>
   );
 }

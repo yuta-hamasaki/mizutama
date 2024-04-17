@@ -21,8 +21,8 @@ export default function Header() {
         <div className="text-sm font-medium flex flex-row">
           <div className="flex flex-row mr-3 px-3 py-3"> 
             <Link href="/about"><p>会社概要</p></Link>
-            <Link href="/skills"><p className="px-5">サービス</p></Link>
-            <Link href="#projects"><p>製品情報</p></Link>
+            <Link href="/service"><p className="px-5">サービス</p></Link>
+            <Link href="/products"><p>製品情報</p></Link>
           </div>
           <ContactButton/>
         </div>
@@ -39,9 +39,9 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-md py-2">
           <div className="flex flex-col items-center">
-            <Link href="/"><p className="py-2">会社概要</p></Link>
-            <Link href="/"><p className="py-2">サービス</p></Link>
-            <Link href="/"><p className="py-2">製品情報</p></Link>
+            <Link href="/about"><p className="py-2">会社概要</p></Link>
+            <Link href="/service"><p className="py-2">サービス</p></Link>
+            <Link href="/products"><p className="py-2">製品情報</p></Link>
             <ContactButton/>
           </div>
         </div>
