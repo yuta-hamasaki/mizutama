@@ -12,9 +12,7 @@ export default function Home() {
       <FadeIn>
         <About/>
       </FadeIn>
-      <FadeIn>
         <Feature/>
-      </FadeIn>
       <FadeIn>
         <Info/>
       </FadeIn>
