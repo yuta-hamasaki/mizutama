@@ -8,16 +8,14 @@ import Location from './components/Location'
 export default function Home() {
   return (
     <div>
-        <Top/>
+      <Top/>
       <FadeIn>
         <About/>
       </FadeIn>
-        <Feature/>
+      <Feature/>
+      <Info/>
       <FadeIn>
-        <Info/>
-      </FadeIn>
-      <FadeIn>
-       <Location/>
+      <Location/>
       </FadeIn>
     </div>
   );

@@ -1,5 +1,7 @@
 import DetailBtn from './DetailBtn';
 import React from 'react';
+import Link from 'next/link';
+
 
 const About = () => {
   return (
@@ -12,7 +14,9 @@ const About = () => {
         </p>
       </div>
       <div className="pt-16">
+      <Link href="/about">
         <DetailBtn />
+      </Link>
       </div>
     </div>
   );
