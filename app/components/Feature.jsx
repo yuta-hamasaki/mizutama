@@ -1,6 +1,7 @@
 import React from 'react'
 import FeatCards from './FeatCards'
 
+
 const Feature = () => {
   /*const feat = [
     {title: "輸入", contents: "テキスト"},
@@ -17,7 +18,7 @@ const Feature = () => {
           content={feat.contents}*/
         />
         }{/*)}*/}
-       </div>
+      </div>
     </div>
   )
 }

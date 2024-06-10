@@ -1,17 +1,33 @@
 import React from 'react';
 import Image from 'next/image';
-import Ship from './topShip.jpg';
+import bg from './topShip.jpg';
+import {motion} from 'framer-motion'
 
 const Top = () => {
   return (
-    <div className="relative h-screen">
+    <div className='h-screen bg-cover bg-center pb-10 flex justify-center items-center relative' style={{ backgroundImage: `url(${bg.src})` }}>
       <div
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10"
+          className='flex flex-col text-center'
       >
-        <h1 className="text-white font-bold text-4xl">九陽商事</h1>
-        <h2 className="text-white text-lg">Kuyo corporation</h2>
+        <motion.h1
+        initial={{x:-30, opacity: 0 }}
+        whileInView={{x:0, opacity: 1}}
+        transition={{type: "spring",
+        duration: 2}}
+        className='text-white font-bold text-2xl'>京都と香港のをつなぐ</motion.h1>
+        <motion.h2
+          initial={{x:30, opacity: 0 }}
+          whileInView={{x:0, opacity: 1}}
+          transition={{type: "spring",
+          duration: 4}}
+          className="text-white font-bold text-5xl">九陽商事</motion.h2>
+        <motion.h2 
+        initial={{x:30, opacity: 0 }}
+        whileInView={{x:0, opacity: 1}}
+        transition={{type: "spring",
+        duration: 4}}
+        className="text-white text-2xl">Kuyo corporation</motion.h2>
       </div>
-      <Image src={Ship} layout="fill" objectFit="cover" alt="Ship" />
     </div>
   );
 };

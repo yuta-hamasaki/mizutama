@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import ContactButton from './ContactButton';
+import {motion} from 'framer-motion'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,12 @@ export default function Header() {
   };
 
   return (
-    <header className="py-5 px-10 flex justify-between items-center fixed w-full bg-blue-50 z-50 shadow-xl">
+    <motion.header
+    initial={{y:-20, opacity: 0 }}
+    whileInView={{y:0, opacity: 1}}
+    transition={{type: "spring",
+    duration: 0.4}}
+    className="py-5 px-10 flex justify-between items-center fixed w-full bg-blue-50 z-50 shadow-xl">
       <div>
         <h1 className="text-2xl font-extrabold">
           <Link href="/">九陽商事</Link>
@@ -20,9 +26,9 @@ export default function Header() {
       <div className="hidden md:flex">
         <div className="text-sm font-medium flex flex-row">
           <div className="flex flex-row mr-3 px-3 py-3"> 
-            <Link href="/about"><p>会社概要</p></Link>
-            <Link href="/service"><p className="px-5">サービス</p></Link>
-            <Link href="/products"><p>製品情報</p></Link>
+            <Link href="/about"><p>About Us</p></Link>
+            <Link href="/service"><p className="px-5">Service</p></Link>
+            <Link href="/products"><p>Products</p></Link>
           </div>
           <ContactButton/>
         </div>
@@ -46,7 +52,7 @@ export default function Header() {
           </div>
         </div>
       )}
-    </header>
+    </motion.header>
   );
 }
 
