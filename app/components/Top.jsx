@@ -14,7 +14,7 @@ const Top = () => {
         whileInView={{x:0, opacity: 1}}
         transition={{type: "spring",
         duration: 2}}
-        className='text-white font-bold text-2xl'>京都と香港のをつなぐ</motion.h1>
+        className='text-white font-bold text-2xl'>日本と世界を繋ぎたい第一歩は香港から</motion.h1>
         <motion.h2
           initial={{x:30, opacity: 0 }}
           whileInView={{x:0, opacity: 1}}
